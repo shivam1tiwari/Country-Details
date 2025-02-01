@@ -38,7 +38,12 @@ const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: '#1A2027',
   }),
 }));
-
+/**
+ * CountryList component that fetches and displays a list of all countries from the API.
+ * It shows a list of country flags and relevant information such as currency and country code.
+ *
+ * @returns {JSX.Element} The rendered list of countries with their details.
+ */
 const CountryList = () =>{
   const classes = useStyles();
   const [countries, setCountrie ] = useState(null);
@@ -61,7 +66,6 @@ const CountryList = () =>{
     fetchCountry();
   },[]);
 
-  console.log(countries)
   if(!countries){
     console.log("raju")
     return <Box className={classes.loader} sx={{ display: 'flex',justifyContent:"center" }}>

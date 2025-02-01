@@ -64,15 +64,13 @@ const useStyles = makeStyles({
   loader:{
     marginTop:"10rem"
   },
-  // slider_container:{
-  //   display: "flex",
-  //   height: "100%",
-  //   width: "100%",
-  //   overflow: "hidden",
-  //   // border:"1px solid red"
-  // }
 });
-
+/**
+ * CountryDetails component that fetches and displays detailed information about a country.
+ * This includes details like capital, region, population, currency, and languages.
+ *
+ * @returns {JSX.Element} The detailed view of the selected country, including images, map, and description.
+ */
 const CountryDetails = () => {
   const classes = useStyles();
   const { countryName } = useParams();
@@ -115,13 +113,7 @@ const CountryDetails = () => {
 
     fetchCountry();
   },[countryName]);
-  // const images = [
-  //   "https://cdn.britannica.com/98/1598-050-BD4FD93E/India-political-boundaries.jpg",
-  //   "https://cdn.britannica.com/98/1598-050-BD4FD93E/India-political-boundaries.jpg",
-  //   "https://cdn.britannica.com/98/1598-050-BD4FD93E/India-political-boundaries.jpg",
-  //   "https://cdn.britannica.com/98/1598-050-BD4FD93E/India-political-boundaries.jpg",
-  //   "https://cdn.britannica.com/98/1598-050-BD4FD93E/India-political-boundaries.jpg",
-  // ]
+
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -201,7 +193,6 @@ const CountryDetails = () => {
             </Grid>
           </Grid>
           </Box>
-          {/* <Box><Typography style={{marginRight:"3rem",transformStyle: "preserve-3d",animation: "rotateYContinuous 5s linear infinite"}} variant='h2' color='green'  >{ country?.currencies ? country?.currencies[(Object.keys(country?.currencies))[0]].symbol : ""}</Typography></Box> */}
         </Box>
       </Paper>
     </Box>

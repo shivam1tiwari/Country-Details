@@ -4,7 +4,10 @@ import Header from './components/header/Header';
 import CountryList from './components/country-list/CountryList';
 import CountryDetails from './components/country-details/CountryDetails';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+/**
+ * This component controlls all routing
+ * @returns {JSX.Element} 
+ */
 function App() {
   return (
     <BrowserRouter>

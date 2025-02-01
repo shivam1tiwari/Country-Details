@@ -3,6 +3,12 @@ import Avatar from '@mui/material/Avatar';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
+/**
+ * Header component displays the navigation bar with a logo,and avatar.
+ * It fetches the country  name from Redux store.
+ *
+ * @returns {JSX.Element} The rendered Header component.
+ */
 const Header = () => {
    const name = useSelector((state=>state))
   return(
